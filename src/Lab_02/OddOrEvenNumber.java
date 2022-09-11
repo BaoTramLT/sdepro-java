@@ -2,7 +2,7 @@ package Lab_02;
 
 import java.util.Scanner;
 
-public class OddOrNumber {
+public class OddOrEvenNumber {
     public static void main(String[]args) {
 
         Scanner scanner = new Scanner(System.in);
