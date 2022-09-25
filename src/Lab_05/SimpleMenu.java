@@ -73,7 +73,7 @@ public class SimpleMenu {
                 break;
 
             case 5:
-                System.out.println("Search your number: ");
+                System.out.print("Search your number: ");
                 int searchNumber = scanner.nextInt();
                 if (myArrList.contains(searchNumber)) {
                     System.out.print("Your position of search number is: " + myArrList.indexOf(searchNumber));
