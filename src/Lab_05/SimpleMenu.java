@@ -26,7 +26,6 @@ public class SimpleMenu {
         myArrList.add(new SecureRandom().nextInt(100));
         myArrList.add(new SecureRandom().nextInt(100));
         myArrList.add(new SecureRandom().nextInt(100));
-        myArrList.add(new SecureRandom().nextInt(100));
 
         System.out.println("Random number is: " + myArrList);
 
