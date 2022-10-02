@@ -1,11 +1,6 @@
 package lab_05;
 
-
-
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
-
 import java.util.ArrayList;
-import java.security.SecureRandom;
 import java.util.*;
 import java.util.Scanner;
 
