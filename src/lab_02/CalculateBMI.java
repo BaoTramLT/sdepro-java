@@ -1,4 +1,4 @@
-package Lab_02;
+package lab_02;
 
 import java.util.Scanner;
 
@@ -9,9 +9,9 @@ public class CalculateBMI {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input your weight and height: ");
 
-        float weight = scanner.nextFloat();
-        float height = scanner.nextFloat();
-        float BMI = weight/(height*2);
+        double weight = scanner.nextDouble();
+        double height = scanner.nextDouble();
+        double BMI = weight/(height*2);
 
         if (BMI < 18.5) {
             System.out.println("Your are Underweight");

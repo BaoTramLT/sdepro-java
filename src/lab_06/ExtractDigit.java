@@ -1,6 +1,4 @@
-package Lab_06;
-
-import java.util.Arrays;
+package lab_06;
 
 public class ExtractDigit {
     public static void main(String[] args) {

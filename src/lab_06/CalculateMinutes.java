@@ -1,4 +1,4 @@
-package Lab_06;
+package lab_06;
 
 public class CalculateMinutes {
     public static void main(String[] args) {
