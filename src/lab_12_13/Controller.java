@@ -12,7 +12,6 @@ public class Controller {
             }
         }
         return unableToFlyList;
-
     }
 
     public MoveAble winnerIs (List<MoveAble> moveAbleList) {
