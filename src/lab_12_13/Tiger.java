@@ -1,13 +1,27 @@
-package lab_11;
+package lab_12_13;
 
-public class Tiger extends Animal {
-    @Override
-    public String species() {
-        return "Tiger";
+import java.security.SecureRandom;
+
+public class Tiger implements FlyAble, MoveAble {
+
+    private int speed;
+
+    public Tiger () {
+        speed = new SecureRandom().nextInt(100);
     }
 
     @Override
-    public int maxSpeed() {
-        return 100;
+    public boolean isFlyAble() {
+        return false;
+    }
+
+    @Override
+    public int speed() {
+        return this.speed;
+    }
+
+    @Override
+    public String toString() {
+        return isFlyAble() + " " + speed();
     }
 }

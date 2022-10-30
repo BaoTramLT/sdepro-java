@@ -1,14 +1,28 @@
-package lab_11;
+package lab_12_13;
 
-public class Horse extends Animal {
-    @Override
-    public String species() {
-        return "Horse";
+import java.security.SecureRandom;
+
+public class Horse implements FlyAble, MoveAble{
+
+    private int speed;
+
+    public Horse () {
+        speed = new SecureRandom().nextInt(100);
     }
 
     @Override
-    public int maxSpeed() {
-        return 75;
+    public boolean isFlyAble() {
+        return false;
+    }
+
+    @Override
+    public int speed() {
+        return this.speed;
+    }
+
+    @Override
+    public String toString() {
+        return isFlyAble() + " " + speed();
     }
 }
 
