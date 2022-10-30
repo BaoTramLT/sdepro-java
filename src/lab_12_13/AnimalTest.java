@@ -12,9 +12,9 @@ public class AnimalTest {
          Horse horse = new Horse();
          Tiger tiger = new Tiger();
 
-         List flyAblesAnimal = controller.unableToFlyList(Arrays.asList(horse, tiger, dog, falcon));
-         System.out.println(flyAblesAnimal);
-         MoveAble winner = controller.winnerIs(flyAblesAnimal);
+         List unableToFlyAnimal = controller.unableToFlyList(Arrays.asList(horse, tiger, dog, falcon));
+         System.out.println(unableToFlyAnimal);
+         MoveAble winner = controller.winnerIs(unableToFlyAnimal);
          System.out.println(winner);
     }
 }
