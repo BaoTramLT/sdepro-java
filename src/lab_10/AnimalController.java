@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalController  {
-    public static List getAnimalRacing(List<Animal> animalList) {
+    private List getAnimalRacing(List<Animal> animalList) {
         List<Animal> listRacer = new ArrayList<>();
         for (Animal animal : animalList) {
             if (!animal.isFlying()) {
@@ -15,24 +15,13 @@ public class AnimalController  {
         return listRacer;
     }
 
-    public static List getRandomNumber(List<Animal> animalList) {
-        List<Animal> randomNumberList = new ArrayList<>();
-        for (Animal animal : animalList) {
-            int randomNumber = new SecureRandom().nextInt(100);
-            randomNumberList.add(new Animal.Builder().setSpecies(animal.getSpecies()).setSpeed(randomNumber).build());
-            System.out.println("The speed of " + animal.getSpecies() + " is " + randomNumber);
-        }
-        return randomNumberList;
-    }
+    public Animal winnerIs (List<Animal> animalList) {
 
-    public static String winnerIs (List<Animal> animalList) {
-        int winSpeed = animalList.get(0).getSpeed();
-        String winner = animalList.get(0).getSpecies();
-
-        for (Animal animal : animalList) {
-            if (winSpeed < animal.getSpeed()) {
-                winSpeed = animal.getSpeed();
-                winner = animal.getSpecies();
+        List<Animal> listRacer = getAnimalRacing(animalList);
+        Animal winner = animalList.get(0);
+        for (Animal animal : listRacer) {
+            if (animal.getSpeed() < winner.getSpeed()) {
+               winner = animal;
             }
         }
         return winner;

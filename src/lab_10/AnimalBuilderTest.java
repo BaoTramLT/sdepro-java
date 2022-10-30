@@ -1,4 +1,5 @@
 package lab_10;
+import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
 
@@ -6,18 +7,17 @@ import static lab_10.Animal.Builder;
 
 public class AnimalBuilderTest {
     public static void main(String[] args) {
-        Builder builder = new Builder();
-        Animal falcon = builder.setSpecies("Falcon").setFlying(true).build();
-        Animal bird = builder.setSpecies("Bird").setFlying(true).build();
-        Animal dog = builder.setSpecies("Dog").setFlying(false).build();
-        Animal lion = builder.setSpecies("Lion").setFlying(false).build();
-        Animal wolf = builder.setSpecies("Wolf").setFlying(false).build();
+        Animal falcon = new Builder().setSpecies("Falcon").setFlying(true).setSpeed(new SecureRandom().nextInt(100)).build();
+        Animal bird = new Builder().setSpecies("Bird").setFlying(true).setSpeed(new SecureRandom().nextInt(50)).build();
+        Animal dog = new Builder().setSpecies("Dog").setFlying(false).setSpeed(new SecureRandom().nextInt(60)).build();
+        Animal lion = new Builder().setSpecies("Lion").setFlying(false).setSpeed(new SecureRandom().nextInt(100)).build();
+        Animal wolf = new Builder().setSpecies("Wolf").setFlying(false).setSpeed(new SecureRandom().nextInt(85)).build();
 
         List<Animal> animalList = Arrays.asList(falcon, bird, dog, lion, wolf);
-        List<Animal> getAnimalRacing = AnimalController.getAnimalRacing(animalList);
-        List<Animal> getRandomNumber = AnimalController.getRandomNumber(getAnimalRacing);
+        System.out.println(animalList);
 
-        System.out.println("The winner is: " + AnimalController.winnerIs(getRandomNumber));
+        Animal winner = new AnimalController().winnerIs(animalList);
+        System.out.println("The winner is: " + winner.getSpecies());
 
     }
 }
